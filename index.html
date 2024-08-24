@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Girassóis</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+
+        * {
+            font-family: 'Poppins', cursive;
+            box-sizing: border-box;
+        }
+
+        body {
+            color: azure;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: black;
+            margin: 0;
+        }
+
+        .message {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .sunflower {
+            position: relative;
+            width: 150px;
+            height: 150px;
+        }
+
+        .sunflower__petals {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+        }
+
+        .sunflower__petal {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background: yellow;
+            border-radius: 50% 50% 0 0;
+            transform-origin: bottom center;
+        }
+
+        .sunflower__petal--1 { transform: rotate(0deg); }
+        .sunflower__petal--2 { transform: rotate(45deg); }
+        .sunflower__petal--3 { transform: rotate(90deg); }
+        .sunflower__petal--4 { transform: rotate(135deg); }
+        .sunflower__petal--5 { transform: rotate(180deg); }
+        .sunflower__petal--6 { transform: rotate(225deg); }
+        .sunflower__petal--7 { transform: rotate(270deg); }
+        .sunflower__petal--8 { transform: rotate(315deg); }
+
+        .sunflower__center {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background: brown;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .sunflower--1 {
+            animation: rotateSunflower 10s linear infinite;
+        }
+
+        .sunflower--2 {
+            animation: rotateSunflower 10s linear infinite reverse;
+        }
+
+        @keyframes rotateSunflower {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="message">
+        <span>Te amo minha estressada</span>
+    </div>
+
+    <!-- Girassol 1 -->
+    <div class="sunflower sunflower--1">
+        <div class="sunflower__petals">
+            <div class="sunflower__petal sunflower__petal--1"></div>
+            <div class="sunflower__petal sunflower__petal--2"></div>
+            <div class="sunflower__petal sunflower__petal--3"></div>
+            <div class="sunflower__petal sunflower__petal--4"></div>
+            <div class="sunflower__petal sunflower__petal--5"></div>
+            <div class="sunflower__petal sunflower__petal--6"></div>
+            <div class="sunflower__petal sunflower__petal--7"></div>
+            <div class="sunflower__petal sunflower__petal--8"></div>
+        </div>
+        <div class="sunflower__center"></div>
+    </div>
+
+    <!-- Girassol 2 -->
+    <div class="sunflower sunflower--2">
+        <div class="sunflower__petals">
+            <div class="sunflower__petal sunflower__petal--1"></div>
+            <div class="sunflower__petal sunflower__petal--2"></div>
+            <div class="sunflower__petal sunflower__petal--3"></div>
+            <div class="sunflower__petal sunflower__petal--4"></div>
+            <div class="sunflower__petal sunflower__petal--5"></div>
+            <div class="sunflower__petal sunflower__petal--6"></div>
+            <div class="sunflower__petal sunflower__petal--7"></div>
+            <div class="sunflower__petal sunflower__petal--8"></div>
+        </div>
+        <div class="sunflower__center"></div>
+    </div>
+</body>
+</html>
